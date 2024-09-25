@@ -1,0 +1,102 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  color: #003543;
+  height: 100%;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+.d-none {
+  display: none;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.welcome {
+  margin-bottom: 20px;
+}
+.welcome .label {
+  opacity: 0.5;
+  font-weight: 300;
+  padding-left: 3px;
+  line-height: 1;
+}
+.welcome .brand {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1;
+}
+.slogan {
+  font-weight: 300;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+.blocks-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  background: #E6F0F0;
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.block .title {
+  color: #003543;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.block .desc {
+  color: #255461;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.block .link, .block .link a {
+  color: #497A87;
+  text-decoration: none;
+  font-size: 14px;
+}
+.block .link + .link, .block .link a + .link {
+  margin-top: 10px;
+}
+.block .icons {
+  display: inline-block;
+  height: 30px;
+}
+.block .icons a {
+  color: #497A87;
+  text-decoration: none;
+}
+.columns-wrap {
+  display: flex;
+  max-width: 700px;
+}
+.columns-wrap .column {
+  padding: 0 10px;
+}
+.columns-wrap .column:first-child {
+  width: 65%;
+}
+.columns-wrap .column:last-child {
+  width: 35%;
+}
+.columns-wrap .column.full-height {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}

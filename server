@@ -1,0 +1,40 @@
+#!/usr/bin/env php
+
+<?php
+
+$bin = "/usr/local/bin/php";
+$script = realpath("server.php");
+$host = "127.0.0.1";
+$cwd = __DIR__ . '/public';
+$descriptors = [STDIN, STDOUT, STDOUT];
+$port = getPort($host, 8000, 9000);
+
+$commandline = sprintf("exec '%s' '-S' '%s' '%s'", $bin, $host.':'.$port, $script);
+$process = @proc_open($commandline, $descriptors, $pipes, $cwd);
+@proc_close($process);
+
+
+function getPort(string $host, int $from, int $to)
+{
+    $port = $from;
+
+    while ($port <= $to) {
+        if (! isListened($host, $port)) return $port;
+        $port++;
+    }
+
+    echo "Server not available.";
+    exit();
+}
+
+function isListened($host, $port): bool
+{
+    $sock = @fsockopen($host, $port);
+
+    if (is_resource($sock)) {
+        fclose($sock);
+        return true;
+    }
+
+    return false;
+}

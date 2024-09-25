@@ -1,0 +1,126 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  color: #003543;
+  height: 100%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.d-none { display: none; }
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome {
+  margin-bottom: 20px;
+
+  .label {
+    opacity: 0.5;
+    font-weight: 300;
+    padding-left: 3px;
+    line-height: 1;
+  }
+  .brand {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+
+.slogan {
+  font-weight: 300;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+.blocks-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  background: #E6F0F0;
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: stretch;
+
+  ._head {
+
+  }
+
+  ._footer {
+
+  }
+
+  .title {
+    color: #003543;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .desc {
+    color: #255461;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .link, .link a {
+    color: #497A87;
+    text-decoration: none;
+    font-size: 14px;
+
+    & + .link {
+      margin-top: 10px;
+    }
+  }
+
+  .icons {
+    display: inline-block;
+    height: 30px;
+
+    a {
+      color: #497A87;
+      text-decoration: none;
+    }
+  }
+}
+
+.columns-wrap {
+  display: flex;
+  max-width: 700px;
+
+  .column {
+    padding: 0 10px;
+
+    &:first-child {
+      width: 65%;
+    }
+    &:last-child {
+      width: 35%;
+    }
+
+    &.full-height {
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+    }
+  }
+}
