@@ -3,10 +3,11 @@
 namespace App\Http;
 
 use App\Http\Middleware\CookieEncryption;
+use Imhotep\Framework\Http\Kernel as KernelBase;
 use Imhotep\Framework\Http\Middleware\AddQueuedCookiesToResponse;
 use Imhotep\Session\Middleware\StartSession;
 
-class Kernel extends \Imhotep\Framework\Http\Kernel
+class Kernel extends KernelBase
 {
 
     /**

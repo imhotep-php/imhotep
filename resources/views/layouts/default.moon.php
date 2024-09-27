@@ -17,6 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ scss('welcome.scss') }}">
 </head>
-    @yield('content')
+    @yeld('content')
 </body>
 </html>

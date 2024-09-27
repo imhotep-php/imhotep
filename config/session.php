@@ -7,7 +7,7 @@ return [
 
     'encrypt' => false,
 
-    'lifetime' => env('SESSION_LIFETIME', 120), // sec
+    'lifetime' => env('SESSION_LIFETIME', 120), // In seconds...
 
     'expire_on_close' => false,
 
@@ -21,22 +21,11 @@ return [
 
     'sameSite' => 'lax',
 
-    'drivers' => [
-        'array' => [],
+    'files' => storage_path('sessions'),
 
-        'cookie' => [],
+    'connection' => null,
 
-        'file' => [
-            'path' => storage_path('sessions'),
-        ],
+    'table' => 'sessions',
 
-        'database' => [
-            'connection' => null, // 'null' is default connection
-            'table' => 'sessions',
-        ],
-
-        'cache' => [
-            'store' => null, // 'null' is default cache store
-        ]
-    ],
+    'store' => null,
 ];
