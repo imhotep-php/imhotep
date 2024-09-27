@@ -13,5 +13,5 @@
         "scssphp/scssphp": "^1.11"
     },
     "minimum-stability": "stable",
-    "prefer-stable": true,
+    "prefer-stable": true
 }
