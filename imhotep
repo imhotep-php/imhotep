@@ -13,11 +13,9 @@ $app = new Application(
   dirname(__FILE__)
 );
 
-$app->alias('route', \Imhotep\Contracts\Http\Router::class);
 $app->alias('request', \Imhotep\Contracts\Http\Request::class);
 $app->alias('response', \Imhotep\Contracts\Http\Response::class);
 
-$app->singleton(\Imhotep\Contracts\Http\Router::class, \Imhotep\Routing\Router::class);
 $app->singleton(\Imhotep\Contracts\Http\Request::class, \Imhotep\Http\Request::class);
 $app->singleton(\Imhotep\Contracts\Http\Response::class, \Imhotep\Http\Response::class);
 

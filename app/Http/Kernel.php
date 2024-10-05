@@ -9,7 +9,6 @@ use Imhotep\Session\Middleware\StartSession;
 
 class Kernel extends KernelBase
 {
-
     /**
      * Global middleware stack
      * @var array
