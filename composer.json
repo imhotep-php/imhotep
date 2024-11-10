@@ -10,6 +10,7 @@
     },
     "require": {
         "imhotep/components": "^1.0",
+        "imhotep/docker": "^1.0",
         "scssphp/scssphp": "^1.11"
     },
     "minimum-stability": "stable",
