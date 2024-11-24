@@ -3,7 +3,7 @@
 use Imhotep\Contracts\Http\Kernel;
 use Imhotep\Http\Request;
 
-define('IMHOTEP_START', time());
+define('IMHOTEP_START', microtime(true));
 
 require __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/../app/helpers.php';
