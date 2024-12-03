@@ -21,7 +21,6 @@ return [
 
     'providers' => [
         // Imhotep providers
-        \Imhotep\Log\LogServiceProvider::class,
         \Imhotep\Encryption\EncryptionServiceProvider::class,
         \Imhotep\Cookie\CookieServiceProvider::class,
         \Imhotep\Filesystem\FilesystemServiceProvider::class,
@@ -49,7 +48,7 @@ return [
 
     ],
 
-    'aliases' => [
+    'aliases' => \Imhotep\Facades\Facade::defaultAliases([
 
-    ]
+    ])
 ];

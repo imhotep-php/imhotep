@@ -5,6 +5,9 @@ namespace App\Http;
 use App\Http\Middleware\CookieEncryption;
 use Imhotep\Framework\Http\Kernel as KernelBase;
 use Imhotep\Framework\Http\Middleware\AddQueuedCookiesToResponse;
+use Imhotep\Framework\Http\Middleware\EmptyStringsToNull;
+use Imhotep\Framework\Http\Middleware\ShareErrorsFromSessionToView;
+use Imhotep\Framework\Http\Middleware\TrimStrings;
 use Imhotep\Session\Middleware\StartSession;
 
 class Kernel extends KernelBase
@@ -14,9 +17,12 @@ class Kernel extends KernelBase
      * @var array
      */
     protected array $middleware = [
+        TrimStrings::class,
+        EmptyStringsToNull::class,
         CookieEncryption::class,
         AddQueuedCookiesToResponse::class,
-        StartSession::class
+        StartSession::class,
+        ShareErrorsFromSessionToView::class
     ];
 
     /**
